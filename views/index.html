@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Гильдия -sqd-</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js" integrity="sha256-36hEPcG8mKookfvUVvEqRkpdYV1unP6wvxIqbgdeVhk=" crossorigin="anonymous"></script>
+  
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+  </head>
+  <body>
+  <div id="particles-js">
+    
+    </div>
+<!--   <div id="particles-js"> -->
+    <h1 class="title">
+      Гильдия -sqd-
+    </h1>
+    <h6 class="minititle">
+      Гильдия на сервере VimeWorld
+    </h6>
+    <div class="guildicondiv">
+      <img src="https://mc.vimeworld.ru/launcher/guilds/11479.jpg" class="iconguild">
+    </div>
+    
+    <div class="level-bar">
+      <p class="level levelbarel" id="level">
+        1 LVL
+      </p>
+      
+      <progress class="progress levelbarel" value="15" max="100"  id="levelprogress"></progress>
+    </div>
+    <div class="leader-bar">
+      <h3 class="leader">
+      Лидер: 
+    </h3>
+    <div id="members11">
+        
+      </div>
+    </div>
+    
+    <h3 class="officertext">
+      Офицеры:
+    </h3>
+    <div class="members">
+      <div id="members1">
+        
+      </div>
+    <h3 class="playertext">
+      Игроки:
+      </h3>
+      <div id="members2">
+        
+      </div>
+      <div id="members3">
+        
+      </div>
+    </div>
+    <div class="contact">
+      <h3 style="width:100%;text-align:center;">
+        Контакты:
+      </h3>
+      <h3 style="width:100%;text-align:center;">
+      <a style="color:white;" href="https://discord.gg/5QtSFmN">Discord</a>
+        <a style="color:white;" href="https://vk.com/thesqdguild">VK</a>
+        <a style="color:white;" href="https://vimetop.ru/guild/11479">VimeTop</a>
+      </h3>
+    </div>
+    <div class="audio">
+      <h3>
+        Mrsasha45op - Squad(-sqd-)  
+      </h3>
+      <audio  src="https://cdn.glitch.com/a7d4aa14-c4e5-4085-841d-31f7c1567461%2FMrsasha45op%20-%20Squad.mp3?v=1565364405135" controls> <p>Если вы видите это сообщение ,значит ваш браузер не поддерживает элемент audio.</p> </audio>
+      <br>
+      
+    </div>
+    <h3 style="position:absolute;top:1000px;width:100%;text-align:center;">
+         Copyright 2019 Site and musicMade By Mrsasha45op. All rights reserved. 29.08.2019
+      </h3>
+    <div id="particles">
+      
+    
+    </div>
+    
+    
+    
+    
+    <script src="/client.js" defer></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+    <script>
+    function renderallmembers(){
+  var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.vime.world/guild/get?id=11479', false);
+xhr.send();  
+  var data = JSON.parse(xhr.responseText);
+  for(var i = 0;i < data.members.length;i++){
+    if(data.members[i].status == "MEMBER"){
+       $("#members2").append(
+								'<img id="member tooltip" class="memberphoto " data-tippy="'+data.members[i].user.username+'['+data.members[i].user.level+']'+'" src="http://skin.vimeworld.ru/helm/'+data.members[i].user.username+'.png">'
+							);
+    
+  }
+  
+}
+    }
+      function renderLeader(){
+        var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.vime.world/guild/get?id=11479', false);
+xhr.send();  
+  var data = JSON.parse(xhr.responseText);
+  for(var i = 0;i < data.members.length;i++){
+    if(data.members[i].status == "LEADER"){
+      $("#members11").append(
+								'<img id="member" class="memberphoto" data-tippy="'+data.members[i].user.username+'['+data.members[i].user.level+']'+'" src="http://skin.vimeworld.ru/helm/'+data.members[i].user.username+'.png">'
+							);
+      
+      
+    }
+    
+  }
+      
+      }
+      
+      function renderguildofficer(){
+  var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.vime.world/guild/get?id=11479', false);
+xhr.send();  
+  var data = JSON.parse(xhr.responseText);
+  for(var i = 0;i < data.members.length;i++){
+    if(data.members[i].status == "OFFICER"){
+      var ii = 
+      $("#members1").append(
+								'<img class="memberphoto " data-tippy="'+data.members[i].user.username+'['+data.members[i].user.level+']'+'"  src="http://skin.vimeworld.ru/helm/'+data.members[i].user.username+'.png">'
+							);
+      
+      // $("#members1").append(
+      // '<img class="memberphoto" src="http://skin.vimeworld.ru/helm/'+data.members[i].user.username+'.png">'
+      // );
+      
+    }
+    
+  }
+}
+renderallmembers();
+      renderLeader();
+      renderguildofficer();
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/app.js" defer></script>
+    
+  </body>
+</html>

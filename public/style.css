@@ -1,0 +1,169 @@
+/* @font-face {
+  font-family: "AppleFont";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+ */
+@font-face {
+font-family: "AppleFont";
+src: url("https://cdn.glitch.com/a7d4aa14-c4e5-4085-841d-31f7c1567461%2FSFProDisplay-Light.ttf?v=1565292744483"); }
+
+@font-face{
+  font-family:"AppleItalic";
+  src: url("https://cdn.glitch.com/a7d4aa14-c4e5-4085-841d-31f7c1567461%2FSFProDisplay-LightItalic.ttf?v=1565293218795");
+}
+
+body{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#particles-js{
+  background-color:black;
+  height:100%;
+  width:100%;
+}
+
+h1{
+  color:white;
+  margin:0;
+  font-family: AppleFont;
+}
+h2{
+  color:white;
+  margin:0;
+  font-family: AppleFont;
+}
+h3{
+  color:white;
+  margin:0;
+  font-family: AppleFont;
+}
+h6{
+  color:white;
+  margin:0;
+  font-family: AppleItalic;
+}
+p{
+  color:white;
+  font-family: AppleFont;
+}
+
+.title{
+  width:100%;
+  text-align:center;
+  position:relative;
+  top:100px;
+}
+
+.minititle{
+  width:100%;
+  text-align:center;
+  position:relative;
+  top:110px;
+}
+.progress{
+  width:30%;
+}
+.progress::-webkit-progress-bar{
+  background-color:white;
+}
+.progress::-webkit-progress-value{
+  background-color:gray;
+}
+.level{
+  float:left;
+  margin-right:10px;
+}
+.progress{
+}
+.level-bar{
+  justify-content:center;
+  display:flex;
+}
+.levelbarel{
+  
+  position:relative;
+  top:200px;
+}
+.leader{
+/*   float:left;
+  margin-right:0px; */
+}
+#leadernick{
+/*   top:4px; */
+  
+}
+.leader-bar{
+/*   justify-content:center;
+  display:flex; */
+  text-align:center;
+  width:100%;
+  position:relative;
+  top:250px;
+}
+.iconguild{
+  
+  position:relative;
+  top:170px;
+}
+.memberphoto{
+  width:64px;
+  height:64px;
+  margin-right:10px;
+}
+#members1{
+  justify-content:center;
+  display:flex;
+  position:relative;
+  top:250px;
+}
+#members2{
+  justify-content:center;
+  display:flex;
+  position:relative;
+  top:300px;
+}
+.officertext{
+  justify-content:center;
+  display:flex;
+  position:relative;
+  top:255px;
+}
+.playertext{
+  justify-content:center;
+  display:flex;
+  position:relative;
+  top:280px;
+}
+.guildicondiv{
+  justify-content: center;
+    display: flex;
+}
+.particles-js-canvas-el{
+  width: 100%;
+    height: 100%;
+    position: absolute;
+/*     bottom: 1px; */
+    background-color: black;
+/*     z-index: -999; */
+}
+#particles{
+  z-index:-999;
+position:absolute;
+  width:100%;
+  height:100%;
+}
+.contact{
+  position:absolute;
+  width: 100%;
+/*     display: flex;
+    justify-content: center; */
+  top:890px;
+}
+.audio{
+  display:flex;
+  justify-content:center;
+  position:relative;
+  top:500px;
+}
