@@ -1,4 +1,4 @@
-# SqdGuild
+# SqdGuild [![CodeFactor](https://www.codefactor.io/repository/github/mrsasha45op/sqdguild/badge)](https://www.codefactor.io/repository/github/mrsasha45op/sqdguild)
 Repository with an example usage of VimeWorld API.
 # Setup
 ᛫ Install all dependencies using `npm i`<br>
